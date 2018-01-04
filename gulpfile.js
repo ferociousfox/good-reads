@@ -32,15 +32,15 @@ gulp.task('jshint', function(){
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
-  .transform(babelify.configure({
-    presets: ['es2015']
-  }))
   .pipe(concat('allConcat.js'))
   .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('jsBrowserify', ['concatInterface'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
+    .transform(babelify.configure({
+      presets: ['es2015']
+    }))
     .bundle()
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/js'));
