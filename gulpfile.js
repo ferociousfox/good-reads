@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var utilities = require('gulp-util');
 var del = require('del');
 var jshint = require('gulp-jshint');
+var babelify = require('babelify');
 var buildProduction = utilities.env.production;
 var lib = require('bower-files')({
   "overrides":{
@@ -31,6 +32,9 @@ gulp.task('jshint', function(){
 
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
+  .transform(babelify.configure({
+    presets: ['es2015']
+  }))
   .pipe(concat('allConcat.js'))
   .pipe(gulp.dest('./tmp'));
 });

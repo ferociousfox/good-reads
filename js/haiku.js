@@ -1,0 +1,1 @@
+export const singleSyll =  ["A","All","And","Are","As","Be","By","Day","Did","Each","Few","For","Get","Have","He","Him","His","I","In","Is","It","Long","Man","Me","More","Much","My","New","Not","Now","Of","Off","Old","On","One","Or","Out","Same","She","So","Star","State","Than","That","The","They","Time","To","Up","War","Was"];
