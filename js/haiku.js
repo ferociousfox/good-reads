@@ -1,4 +1,5 @@
-export const singleSyll =  ["A","All","And","Are","As","Be","By","Day","Did","Each","Few","For","Get","Have","He","Him","His","I","In","Is","It","Long","Man","Me","More","Much","My","New","Not","Now","Of","Off","Old","On","One","Or","Out","Same","She","So","Star","State","Than","That","The","They","Time","To","Up","War","Was"];
+export const singleSyll =  ['Sad','LOSER','MAGA','Chyna','Yuge','The likes of which','Record crowds','Unpresidented','Not a looker','Fake News','I Guarantee it', 'The Failing New York Times', 'Little Rocketman', 'on both sides', 'Melania', 'Tremendous', 'trust me', '...', 'Golf', 'Crooked Hillary', 'Lock her up', 'God blesh the united shtatshh', 'Get em outta here', 'by any means'];
+
 export function makeHaiku(wordsArr){
   let haikuMaker = [];
   for (let i = 0; i < 16; i++) {
