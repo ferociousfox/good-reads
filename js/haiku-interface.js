@@ -1,9 +1,8 @@
-import { makeHaiku, singleSyll } from './../js/haiku.js';
+import { test } from './../js/scripts.js';
 
 $(document).ready(function(){
-  console.log('test');
-  console.log(singleSyll);
-  let whatIsBeingReturned = makeHaiku(singleSyll);
-  console.log(whatIsBeingReturned);
-  $('#haiku').append(whatIsBeingReturned);
+  alert('document ready');
+  let backendTest = test();
+  console.log(backendTest);
+  $('h1').append(backendTest);
 });
