@@ -1,13 +1,16 @@
 import { getResponse } from './../js/hero.js';
 
 $(document).ready(function(){
-  $("#click").click(function(event){
+  $("#hero-form").click(function(event){
     event.preventDefault();
-    getResponse(callback);
+    const heroInput = $('#user-input').val();
 
+    let userArray = [];
+    getResponse(callback, heroInput);
     });
-    function callback(input){
-      console.log(input);
-      $("#results").append(input)
-    }
-  });
+    function callback(userArray){
+      userArray.forEach(function(item) {
+      $("#results").append("<li>" + item + "</li>");
+    });
+  }
+});
