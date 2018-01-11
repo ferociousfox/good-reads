@@ -21,7 +21,8 @@ export class ApiCall {
     })
     .done(function(response) {
       var results = response.data.results;
-      const pic = "<img src=" + results[0].thumbnail.path + "." + results[0].thumbnail.extension + ">";
+      console.log(results);
+      const pic = results[0].thumbnail.path + "." + results[0].thumbnail.extension;
       userArray.push(results[0].name, pic, results[0].description, results[0].comics.available);
       callback(userArray);
     })

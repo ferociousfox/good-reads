@@ -1,0 +1,39 @@
+div.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1vmin;
+  div{
+    flex: 1 1;
+    margin: 1vmin;
+    border: solid 4px black;
+    display: inline-flex;
+    height: 300px;
+    flex-basis: 300px;
+  }
+  div.form{
+    flex-basis: 500px;
+  }
+  div#spidey {
+    background: orange;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    img {
+      max-width: 100%;
+      position: relative;
+    }
+    h2 {
+      position: absolute;
+      top: 7%;
+      width: 15%;
+      left: 69%;
+      text-align: center;
+    }
+  }
+  div#pic {
+    flex-basis: 500px;
+  }
+
+
+
+}

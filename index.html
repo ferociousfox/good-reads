@@ -4,20 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="build/css/vendor.css">
-    <!-- <link rel="stylesheet" href="build/css/main.css"> -->
+    <link rel="stylesheet" href="build/css/main.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>cormix</title>
   </head>
   <body>
-    <form id="hero-form">
-      <input id="user-input" type="text" name="hero" value="text">
-      <button type="submit" id="click" name="button">Click-Clack</button>
-      <div>
-        <ul id="results">
-
-        </ul>
+    <div class="container">
+      <div class="form">
+        <form id="hero-form">
+          <h1>Enter a Marvel character</h1>
+          <input id="user-input" type="text" name="hero">
+          <button type="submit" id="click" name="button">Click-Clack</button>
+        </form>
       </div>
-    </form>
+      <div id="spidey">
+        <img src="bubble.png" alt="">
+        <h2>Look up a marvel character!</h2>
+      </div>
+      <div id="name"></div>
+      <div id="pic"></div>
+        <div id="description"></div>
+        <div id="comic-count">
+        </div>
+    </div>
   </body>
 </html>

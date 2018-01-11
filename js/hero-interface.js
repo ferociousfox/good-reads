@@ -1,7 +1,7 @@
 import { getResponse } from './../js/hero.js';
 
 $(document).ready(function(){
-  $("#hero-form").click(function(event){
+  $("#hero-form").submit(function(event){
     event.preventDefault();
     const heroInput = $('#user-input').val();
 
@@ -9,8 +9,16 @@ $(document).ready(function(){
     getResponse(callback, heroInput);
     });
     function callback(userArray){
-      userArray.forEach(function(item) {
-      $("#results").append("<li>" + item + "</li>");
-    });
-  }
-});
+      let heroPic = userArray[1];
+      $("#name").text(userArray[0]);
+      $("#pic").css(`background-image`, `url(${heroPic})`);
+      $("#pic").css("background-repeat", "no-repeat");
+      $("#pic").css("background-size", "contain");
+      $("#pic").css("background-position", "center");
+      $("#description").text(userArray[2]);
+      $("#comic-count").text(userArray[3]);
+
+
+
+    }
+  });
